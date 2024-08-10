@@ -1,0 +1,297 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+ 
+    background-color:rgb(41, 37, 37); 
+   
+} 
+
+h1{
+    text-align:center;
+    color:white;
+    padding:20px;
+  
+   
+
+}
+.bg-img {
+  /* The image used */
+  background-image: url("images/ani\ 2.avif");
+
+  min-height: 380px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* Needed to position the navbar */
+  position: relative;
+}
+
+/* Position the navbar container inside the image */
+.container {
+  position: absolute;
+  /* margin: 20px; */
+  width: auto;
+  
+}
+
+/* The navbar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  
+}
+
+/* Navbar links */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.topnav a:hover {
+  background-color:white;
+  color:red;
+  text-decoration: underline;
+  text-decoration-color: #000;
+
+}
+
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+@media screen and (max-width: 600px) {
+  .navbar a {
+    float: none;
+    display: block;
+   
+  }
+  .topnav a{
+    font-size:10px;
+  }
+}
+
+
+.maincontainer
+{
+    width: 302px;
+    height: 299px;
+    margin: 25px;
+    /* float: left; stack each div horizontally */
+    display:inline-block;
+
+}
+@media only screen and (max-width: 600px){
+  .maincontainer{
+    margin-left:30px;
+  }
+}
+
+img
+{
+   border-radius: 10px;
+}
+
+.back h2
+{   
+    color:rgb(207, 12, 51);
+    background-color:white;
+    position: absolute;
+    text-decoration: underline;
+    text-decoration-color: #000;
+  }
+.back h3
+{
+    position: absolute;
+    top: 190px;
+    font-size: 22px;
+    left:90px;
+    color:deeppink;
+    background-color:white;
+}
+
+.back p
+{
+    position: absolute;
+    top: 50px;
+    font-size:20px;
+    background-color: white;
+    color:#000;
+    font-style:italic;
+}
+.btn{
+    position: absolute;
+    border:none;
+    outline:none;
+    background-color: green;
+    color:white;
+    cursor:pointer;
+    border-radius: 4px;
+    font-size:15px;
+    display:block;
+    margin:0 auto;
+    top:230px;
+    left:120px;
+    padding:3px;
+  }
+.btn:hover{
+        color:red;
+        background-color: cornflowerblue;
+    }
+
+
+.front h2
+{
+    position: absolute;
+    padding: 10px;
+    top: 200px;
+    color:#f2f2f2;
+
+}
+
+/* style the maincontainer class with all child div's of class .front */
+.maincontainer > .front
+{
+    position: absolute;
+    transform: perspective(600px) rotateY(0deg);
+    
+    width: 302px;
+    height: 290px;
+    
+    backface-visibility: hidden; /* cant see the backside elements as theyre turning around */
+    transition: transform .5s linear 0s;
+}
+
+/* style the maincontainer class with all child div's of class .back */
+.maincontainer > .back
+{
+    position: absolute;
+    transform: perspective(600px) rotateY(180deg);
+    background:white;
+    color: #fff;
+    width: 302px;
+    height: 290px;
+    border-radius: 10px;
+    padding: 5px;
+    backface-visibility: hidden; /* cant see the backside elements as theyre turning around */
+    transition: transform .5s linear 0s;
+}
+
+.maincontainer:hover > .front
+{
+    transform: perspective(600px) rotateY(-180deg);
+}
+
+.maincontainer:hover > .back
+{
+    transform: perspective(600px) rotateY(0deg);
+
+}
+@media screen and (max-width:600px) {
+  .maincontainer{
+    font-size:10px;
+    margin-right:180px;
+   
+}
+}
+@media screen and (max-width:600px) {
+  .back p{
+    font-size:17px;
+  }
+  .back h2{
+    font-size:25px;
+  }
+}
+  /* Default button style */
+#btn2 {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color:red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left:700px;
+}
+
+/* Media query for phones (max-width: 600px) */
+@media (max-width: 600px) {
+  #btn2 {
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color:red; /* Slightly darker blue for better visibility */
+    margin-left:120px;
+  }
+}
+
+
+.para{
+    display:flex;
+    
+} 
+.marquee{
+    display:flex;
+    fLoat:bottom;
+ 
+}
+
+.testimonials {
+  padding: 5rem 0;
+  background: rgba(243, 243, 243);
+}
+
+.testimonial-title {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 400;
+  color:orangered;
+}
+
+.testimonial-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.4rem;
+  padding: 1rem;
+  color:black;
+}
+
+.testimonial-box .checked {
+  color: #ff9529;
+}
+
+.testimonial-box .testimonial-text {
+  margin: 1rem 0;
+  color: white;
+}
+
+.testimonial-box {
+  text-align: center;
+  padding: 1rem;
+}
+
+.customer-photo img {
+  display: block;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  margin: auto;
+}
+.customer-photo p{
+  color:aqua;
+}
+
+#btn2:hover{
+    background-color:#ff9529;
+  } 
+
+  @media screen and (max-width:600px) {
+  #testimonials{
+    display:flex;
+  }
+  }
